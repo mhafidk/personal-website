@@ -2,6 +2,18 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const pageTitle = "Muhammad Hafid Khoirul";
+const skills = [
+  "astro.svg",
+  "elastic.svg",
+  "go.svg",
+  "javascript.svg",
+  "opencv.svg",
+  "postgresql.svg",
+  "python.svg",
+  "redis.png",
+  "ruby.svg",
+  "ruby_on_rails.svg",
+];
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -87,6 +99,9 @@ const pageTitle = "Muhammad Hafid Khoirul";
           </div>
         </li>
       </ol>
+    </div>
+    <div class="mt-20 justify-center flex flex-wrap gap-10">
+      {skills.map((skill) => <img src={skill} alt="" class="h-8 md:h-10" />)}
     </div>
   </div>
   <div class="mt-12" id="contact">
