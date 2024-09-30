@@ -116,7 +116,11 @@ const skills = [
       </ol>
     </div>
     <div class="mt-20 justify-center flex flex-wrap gap-6">
-      {skills.map((skill) => <img src={skill} alt="" class="h-8 md:h-10" />)}
+      {
+        skills.map((skill) => (
+          <img loading="lazy" src={skill} alt="" class="h-8 md:h-10" />
+        ))
+      }
     </div>
   </div>
   <div class="mt-20" id="contact">
