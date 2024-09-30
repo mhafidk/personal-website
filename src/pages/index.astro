@@ -18,23 +18,26 @@ const skills = [
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <div class="flex items-center gap-10">
+  <div class="flex flex-col md:flex-row items-center gap-10">
     <img
       src="/mhk-profile.png"
       alt="Muhammad Hafid Khoirul"
       class="w-44 h-44 rounded-full bg-lime-600"
     />
     <div class="">
-      <h1 class="text-3xl">
+      <h1 class="text-3xl text-center md:text-left">
         Hi, I am <span class="font-bold text-lime-600">Hafid</span>!
       </h1>
-      <p class="text-3xl font-bold my-2">Software Developer</p>
-      <p class="text-xl">
+      <p class="text-3xl font-bold my-2 text-center md:text-left">
+        Software Developer
+      </p>
+      <p class="text-xl text-center md:text-left">
         Currently, I am working as a backend engineer at <a
           href="https://www.qontak.com"
           target="_blank"
           rel="noreferrer"
-          class="border-b border-lime-600 hover:text-lime-700">Qontak</a
+          class="border-b border-lime-600 text-lime-600 hover:text-lime-700"
+          >Qontak</a
         >.
       </p>
     </div>
