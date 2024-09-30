@@ -1,6 +1,13 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+
 const { frontmatter } = Astro.props;
+const options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
@@ -9,10 +16,24 @@ const { frontmatter } = Astro.props;
     class="w-full rounded"
     alt={frontmatter.image.alt}
   />
-  <h1 class="text-3xl text-center font-bold my-8">
+  <h1 class="text-3xl text-center font-bold mt-8 mb-6 text-lime-600">
     {frontmatter.title}
   </h1>
-  <article class="prose">
+  <div class="flex flex-wrap justify-center gap-x-4 gap-y-2 mb-6 opacity-75">
+    <p>
+      {
+        new Date(frontmatter.pubDate).toLocaleDateString("en-US", {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        })
+      }
+    </p>
+    <p>|</p>
+    {frontmatter.tags.map((tag) => <p class="text-violet-600">{tag}</p>)}
+  </div>
+  <article class="prose prose-neutral prose-base md:prose-lg">
     <slot />
   </article>
 </BaseLayout>
