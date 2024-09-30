@@ -1,0 +1,15 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogCard from "../components/BlogCard.astro";
+
+const pageTitle = "Blog";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <h1 class="text-3xl font-bold">Blog</h1>
+  <div class="mt-6">
+    <div class="mt-4">
+      <BlogCard />
+    </div>
+  </div>
+</BaseLayout>
